@@ -1,23 +1,13 @@
 public class WeatherTracker {
     String currentConditions;
-    Phone phone;
-    Emailer emailer;
-
-    public WeatherTracker() {
-        phone = new Phone();
-        emailer = new Emailer();
-    }
 
     public void setCurrentConditions(String weatherDescription) {
-        this.currentConditions = weatherDescription;
-        if(weatherDescription == "rainy") {
-            String alert = phone.generateWeatherAlert(weatherDescription);
-            System.out.println(alert);
-        }
 
-        if(weatherDescription == "sunny") {
-            String alert = emailer.generateWeatherAlert(weatherDescription);
-            System.out.println(alert);
-        }
+        this.currentConditions = weatherDescription;
+    }
+
+    public void notify(Notifier notifier) {
+
+        notifier.alertWeatherConditions(currentConditions);
     }
 }
