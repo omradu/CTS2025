@@ -1,21 +1,20 @@
-public class Eagle implements Bird{
+public class Eagle implements FeatheredCreature, FlyingCreature{
     String currentLocation;
     int numberOfFeathers;
 
-    public Eagle(int initialFeatherCount) {
+    public Eagle(int initialNumberOfFeathers) {
 
-        this.numberOfFeathers = initialFeatherCount;
+        this.numberOfFeathers = initialNumberOfFeathers;
     }
 
-    @Override
     public void fly() {
 
         this.currentLocation = "in the air";
     }
 
-    @Override
     public void molt() {
 
         this.numberOfFeathers -= 1;
     }
 }
+
