@@ -1,4 +1,4 @@
-public class Penguin implements Bird{
+public class Penguin implements SwimmingCreature, FeatheredCreature{
     String currentLocation;
     int numberOfFeathers;
 
@@ -8,17 +8,12 @@ public class Penguin implements Bird{
     }
 
     @Override
-    public void fly() {
-
-        throw new UnsupportedOperationException();
-    }
-
-    @Override
     public void molt() {
 
         this.numberOfFeathers -= 1;
     }
 
+    @Override
     public void swim() {
 
         this.currentLocation = "in the water";
