@@ -19,10 +19,10 @@ public class VirtualMachineLazyThreadSafeBetter {
     }
 
     public static VirtualMachineLazyThreadSafeBetter getInstance() {
-        //The use of synchronized in the method signature reduces performance
-        //To avoid extra overhead we are using the double-checked locking principle
-        //We will use a synchronized block inside the if condition
-        //Plus an additional check to ensure that only one instance of a singleton class is created
+        //Utilizarea cuvântului cheie synchronized în semnătura metodei reduce performanța
+        //Pentru a evita costurile suplimentare, folosim principiul de blocare dublu verificată
+        //Vom utiliza un bloc synchronized în interiorul condiției if
+        //Plus o verificare suplimentară pentru a ne asigura că este creată doar o singură instanță a unei clase singleton
         if (instance == null) {
             synchronized (VirtualMachineLazyThreadSafeBetter.class) {
                 if(instance==null) {
