@@ -36,4 +36,8 @@ public class Fridge {
         itemCount = iCount;
     }
 
+     public int getItemCount() {
+        return getItemCount();
+    }
+
 }
